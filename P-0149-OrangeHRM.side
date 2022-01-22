@@ -1,0 +1,570 @@
+{
+  "id": "9108c9a0-866d-4c2a-8705-580601585f21",
+  "version": "2.0",
+  "name": "P-0149-OrangeHRM",
+  "url": "https://opensource-demo.orangehrmlive.com/",
+  "tests": [{
+    "id": "bf67cae7-3089-4af9-80dd-3efa8dbaad0c",
+    "name": "TC-01-Login",
+    "commands": [{
+      "id": "0f5801f8-9505-411b-82bc-dc4da6e42799",
+      "comment": "",
+      "command": "open",
+      "target": "https://opensource-demo.orangehrmlive.com/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "8b03b861-2f87-4aa3-92e5-0ae12049091f",
+      "comment": "",
+      "command": "storeTitle",
+      "target": "",
+      "targets": [],
+      "value": "pageTitle"
+    }, {
+      "id": "f3174cfd-290b-404e-b707-41f44746a6fa",
+      "comment": "",
+      "command": "click",
+      "target": "css=#divUsername > .form-hint",
+      "targets": [
+        ["css=#divUsername > .form-hint", "css:finder"],
+        ["xpath=//div[@id='divUsername']/span", "xpath:idRelative"],
+        ["xpath=//form/div[2]/span", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "239aacfb-e550-4c8e-81a6-4309b2df39da",
+      "comment": "",
+      "command": "type",
+      "target": "id=txtUsername",
+      "targets": [
+        ["id=txtUsername", "id"],
+        ["name=txtUsername", "name"],
+        ["css=#txtUsername", "css:finder"],
+        ["xpath=//input[@id='txtUsername']", "xpath:attributes"],
+        ["xpath=//div[@id='divUsername']/input", "xpath:idRelative"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": "Admin"
+    }, {
+      "id": "dcac6920-0a59-4c55-9565-dbc20539dbde",
+      "comment": "",
+      "command": "click",
+      "target": "id=txtPassword",
+      "targets": [
+        ["id=txtPassword", "id"],
+        ["name=txtPassword", "name"],
+        ["css=#txtPassword", "css:finder"],
+        ["xpath=//input[@id='txtPassword']", "xpath:attributes"],
+        ["xpath=//div[@id='divPassword']/input", "xpath:idRelative"],
+        ["xpath=//div[3]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "6ad374b8-db4b-4e53-a054-84614d655046",
+      "comment": "",
+      "command": "type",
+      "target": "id=txtPassword",
+      "targets": [
+        ["id=txtPassword", "id"],
+        ["name=txtPassword", "name"],
+        ["css=#txtPassword", "css:finder"],
+        ["xpath=//input[@id='txtPassword']", "xpath:attributes"],
+        ["xpath=//div[@id='divPassword']/input", "xpath:idRelative"],
+        ["xpath=//div[3]/input", "xpath:position"]
+      ],
+      "value": "admin123"
+    }, {
+      "id": "81e20cbb-45d2-4dec-b2d3-b5c5dcb8c0b3",
+      "comment": "",
+      "command": "click",
+      "target": "id=btnLogin",
+      "targets": [
+        ["id=btnLogin", "id"],
+        ["name=Submit", "name"],
+        ["css=#btnLogin", "css:finder"],
+        ["xpath=//input[@id='btnLogin']", "xpath:attributes"],
+        ["xpath=//div[@id='divLoginButton']/input", "xpath:idRelative"],
+        ["xpath=//div[5]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "36d05372-a3bf-4f88-ab9d-e44081fc62e9",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "xpath=//h1[contains(.,'Dashboard')]",
+      "targets": [
+        ["css=h1", "css:finder"],
+        ["xpath=//div[@id='content']/div/div/h1", "xpath:idRelative"],
+        ["xpath=//h1", "xpath:position"],
+        ["xpath=//h1[contains(.,'Dashboard')]", "xpath:innerText"]
+      ],
+      "value": "1"
+    }, {
+      "id": "38e05dbb-1609-44e9-a6bf-05301f75e68c",
+      "comment": "",
+      "command": "echo",
+      "target": "Page title: ${pageTitle}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "a5b30cd7-3bc3-4532-a8f0-c8f301a05d08",
+      "comment": "",
+      "command": "echo",
+      "target": "Login PASSED",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "56972537-df00-4250-8416-9acec6a75fba",
+    "name": "TC-09-Logout",
+    "commands": [{
+      "id": "8b3f6a18-0832-46cd-8d7b-07df96440367",
+      "comment": "",
+      "command": "open",
+      "target": "https://opensource-demo.orangehrmlive.com/index.php/dashboard",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "66c8c509-3a8e-49f7-b81d-65269a567a60",
+      "comment": "",
+      "command": "click",
+      "target": "id=welcome",
+      "targets": [
+        ["id=welcome", "id"],
+        ["linkText=Welcome PAWAN", "linkText"],
+        ["css=#welcome", "css:finder"],
+        ["xpath=//a[contains(text(),'Welcome PAWAN')]", "xpath:link"],
+        ["xpath=//a[@id='welcome']", "xpath:attributes"],
+        ["xpath=//div[@id='branding']/a[2]", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '#')]", "xpath:href"],
+        ["xpath=//a[2]", "xpath:position"],
+        ["xpath=//a[contains(.,'Welcome PAWAN')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "229c2715-a12e-4e0f-9f35-5d72d8349864",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Logout",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b518d779-763d-44f9-870b-6f8183d0592c",
+      "comment": "",
+      "command": "echo",
+      "target": "Logout PASSED",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "6ea8e5ce-8f84-4c18-a1c2-9b772669c606",
+    "name": "TC-02-ExtractEmployeeName",
+    "commands": [{
+      "id": "40752c41-c370-4634-9c34-663ad991aa96",
+      "comment": "",
+      "command": "open",
+      "target": "https://opensource-demo.orangehrmlive.com/index.php/dashboard",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "d9a82779-4997-4c94-aa4c-8f60f14a4fd8",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "id=menu_admin_viewAdminModule",
+      "targets": [
+        ["id=menu_admin_viewAdminModule", "id"],
+        ["linkText=Admin", "linkText"],
+        ["css=#menu_admin_viewAdminModule", "css:finder"],
+        ["xpath=//a[@id='menu_admin_viewAdminModule']", "xpath:attributes"],
+        ["xpath=//ul[@id='mainMenuFirstLevelUnorderedList']/li/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/index.php/admin/viewAdminModule')]", "xpath:href"],
+        ["xpath=//div[2]/ul/li/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Admin')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "35cf575e-5071-4ac5-9c0f-17fcd10c41af",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "id=menu_admin_UserManagement",
+      "targets": [
+        ["id=menu_admin_UserManagement", "id"],
+        ["linkText=User Management", "linkText"],
+        ["css=#menu_admin_UserManagement", "css:finder"],
+        ["xpath=//a[contains(text(),'User Management')]", "xpath:link"],
+        ["xpath=//a[@id='menu_admin_UserManagement']", "xpath:attributes"],
+        ["xpath=//ul[@id='mainMenuFirstLevelUnorderedList']/li/ul/li/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, '#')])[3]", "xpath:href"],
+        ["xpath=//li/ul/li/a", "xpath:position"],
+        ["xpath=//a[contains(.,'User Management')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "f6cb6e4a-8abe-42a8-9c78-b076a9fb1aff",
+      "comment": "",
+      "command": "click",
+      "target": "id=menu_admin_viewSystemUsers",
+      "targets": [
+        ["id=menu_admin_viewSystemUsers", "id"],
+        ["linkText=Users", "linkText"],
+        ["css=#menu_admin_viewSystemUsers", "css:finder"],
+        ["xpath=//a[contains(text(),'Users')]", "xpath:link"],
+        ["xpath=//a[@id='menu_admin_viewSystemUsers']", "xpath:attributes"],
+        ["xpath=//ul[@id='mainMenuFirstLevelUnorderedList']/li/ul/li/ul/li/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/index.php/admin/viewSystemUsers')]", "xpath:href"],
+        ["xpath=//li/ul/li/ul/li/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Users')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "575f9912-64e0-4dee-93b6-2d13994f6fb1",
+      "comment": "",
+      "command": "storeText",
+      "target": "xpath=//td[contains(.,'Anthony Nolan')]",
+      "targets": [
+        ["css=.even:nth-child(4) > .left:nth-child(4)", "css:finder"],
+        ["xpath=//table[@id='resultTable']/tbody/tr[4]/td[4]", "xpath:idRelative"],
+        ["xpath=//tr[4]/td[4]", "xpath:position"],
+        ["xpath=//td[contains(.,'Anthony Nolan')]", "xpath:innerText"]
+      ],
+      "value": "empl"
+    }, {
+      "id": "f7051185-5ef2-499b-a1a1-adc8104c4d8e",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "id=menu_leave_viewLeaveModule",
+      "targets": [
+        ["id=menu_leave_viewLeaveModule", "id"],
+        ["linkText=Leave", "linkText"],
+        ["css=#menu_leave_viewLeaveModule", "css:finder"],
+        ["xpath=//a[@id='menu_leave_viewLeaveModule']", "xpath:attributes"],
+        ["xpath=//ul[@id='mainMenuFirstLevelUnorderedList']/li[3]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/index.php/leave/viewLeaveModule')]", "xpath:href"],
+        ["xpath=//div[2]/ul/li[3]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Leave')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "df878bcd-aa08-4734-bf0c-e661bfa5a12d",
+      "comment": "",
+      "command": "click",
+      "target": "id=menu_leave_assignLeave",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "279c3a7c-8faa-4269-a724-8fb2257650d3",
+      "comment": "",
+      "command": "click",
+      "target": "id=assignleave_txtEmployee_empName",
+      "targets": [
+        ["id=assignleave_txtEmployee_empName", "id"],
+        ["name=assignleave[txtEmployee][empName]", "name"],
+        ["css=#assignleave_txtEmployee_empName", "css:finder"],
+        ["xpath=//input[@id='assignleave_txtEmployee_empName']", "xpath:attributes"],
+        ["xpath=//form[@id='frmLeaveApply']/fieldset/ol/li/input", "xpath:idRelative"],
+        ["xpath=//li/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "1418e2b5-8c8b-4d1a-a461-c1679af62820",
+      "comment": "",
+      "command": "type",
+      "target": "id=assignleave_txtEmployee_empName",
+      "targets": [
+        ["id=assignleave_txtEmployee_empName", "id"],
+        ["name=assignleave[txtEmployee][empName]", "name"],
+        ["css=#assignleave_txtEmployee_empName", "css:finder"],
+        ["xpath=//input[@id='assignleave_txtEmployee_empName']", "xpath:attributes"],
+        ["xpath=//form[@id='frmLeaveApply']/fieldset/ol/li/input", "xpath:idRelative"],
+        ["xpath=//li/input", "xpath:position"]
+      ],
+      "value": "${empl}"
+    }, {
+      "id": "63e2e32b-d69d-4b00-9824-7c448db4279c",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//*[@id=\"assignleave_txtLeaveType\"]/option[10]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "751b3437-25cc-4c6e-ab2f-db58ce974196",
+      "comment": "",
+      "command": "click",
+      "target": "css=li:nth-child(4) > .ui-datepicker-trigger",
+      "targets": [
+        ["css=li:nth-child(4) > .ui-datepicker-trigger", "css:finder"],
+        ["xpath=//form[@id='frmLeaveApply']/fieldset/ol/li[4]/img", "xpath:idRelative"],
+        ["xpath=//li[4]/img", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "421e75cb-d82b-4346-9aa4-dafd2e96a06d",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=31",
+      "targets": [
+        ["linkText=31", "linkText"],
+        ["css=.ui-state-hover", "css:finder"],
+        ["xpath=//a[contains(text(),'31')]", "xpath:link"],
+        ["xpath=//div[@id='ui-datepicker-div']/table/tbody/tr[6]/td/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, '#')])[51]", "xpath:href"],
+        ["xpath=//tr[6]/td/a", "xpath:position"],
+        ["xpath=//a[contains(.,'31')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "c3a0b28b-da74-459c-8091-8d91c0a7d840",
+      "comment": "",
+      "command": "click",
+      "target": "css=.ui-datepicker-trigger:nth-child(3)",
+      "targets": [
+        ["css=.ui-datepicker-trigger:nth-child(3)", "css:finder"],
+        ["xpath=//form[@id='frmLeaveApply']/fieldset/ol/li[5]/img", "xpath:idRelative"],
+        ["xpath=//li[5]/img", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "e453bb5a-9f41-4103-bcb9-2167dee2c242",
+      "comment": "",
+      "command": "click",
+      "target": "css=.ui-icon-circle-triangle-e",
+      "targets": [
+        ["css=.ui-icon-circle-triangle-e", "css:finder"],
+        ["xpath=//div[@id='ui-datepicker-div']/div/a[2]/span", "xpath:idRelative"],
+        ["xpath=//a[2]/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Next')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "7fab4a8f-7dae-455d-9991-a39a5ac38321",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=13",
+      "targets": [
+        ["linkText=13", "linkText"],
+        ["css=.ui-state-hover", "css:finder"],
+        ["xpath=//a[contains(text(),'13')]", "xpath:link"],
+        ["xpath=//div[@id='ui-datepicker-div']/table/tbody/tr[2]/td[7]/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, '#')])[32]", "xpath:href"],
+        ["xpath=//tr[2]/td[7]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'13')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "8f9e1110-a890-4250-ba43-15c75fcc3e56",
+      "comment": "",
+      "command": "type",
+      "target": "id=assignleave_txtComment",
+      "targets": [
+        ["id=assignleave_txtComment", "id"],
+        ["name=assignleave[txtComment]", "name"],
+        ["css=#assignleave_txtComment", "css:finder"],
+        ["xpath=//textarea[@id='assignleave_txtComment']", "xpath:attributes"],
+        ["xpath=//form[@id='frmLeaveApply']/fieldset/ol/li[10]/textarea", "xpath:idRelative"],
+        ["xpath=//textarea", "xpath:position"]
+      ],
+      "value": "Hello Kitty!"
+    }, {
+      "id": "0e0067c2-0b41-4daf-a55a-da4f5a7eadd7",
+      "comment": "",
+      "command": "echo",
+      "target": "EmployeeName: ${empl}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "f0a3c3e0-c9c2-443f-b4c8-bf93377b8b33",
+      "comment": "",
+      "command": "echo",
+      "target": "ExtractName PASSED",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "52853bf7-f533-4386-ae47-0d08d90e8d46",
+    "name": "TC-03-AddJob",
+    "commands": [{
+      "id": "75d557ff-e984-4a96-8f83-645fc8621950",
+      "comment": "",
+      "command": "open",
+      "target": "https://opensource-demo.orangehrmlive.com/index.php/admin/viewJobTitleList",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "09fe28fa-0178-4861-91b4-e416cdeaab85",
+      "comment": "",
+      "command": "store",
+      "target": "QA-AutoTest",
+      "targets": [],
+      "value": "a"
+    }, {
+      "id": "63815306-abd0-403b-b56f-9b2d6dcc090f",
+      "comment": "",
+      "command": "store",
+      "target": "0",
+      "targets": [],
+      "value": "x"
+    }, {
+      "id": "07abca68-9c34-40f1-b7c5-25fc14210e1c",
+      "comment": "",
+      "command": "times",
+      "target": "5",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "d53fc938-7c87-41b1-ba08-d52a5d41b17f",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return Math.floor(${x})+1",
+      "targets": [],
+      "value": "y"
+    }, {
+      "id": "a77042a0-d43c-45f4-b12c-815ebbdfae22",
+      "comment": "",
+      "command": "click",
+      "target": "id=btnAdd",
+      "targets": [
+        ["id=btnAdd", "id"],
+        ["name=btnAdd", "name"],
+        ["css=#btnAdd", "css:finder"],
+        ["xpath=//input[@id='btnAdd']", "xpath:attributes"],
+        ["xpath=//form[@id='frmList_ohrmListComponent']/div/input", "xpath:idRelative"],
+        ["xpath=//form/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "bbf8fc33-b15a-4097-928f-d0d1b99b106a",
+      "comment": "",
+      "command": "click",
+      "target": "id=jobTitle_jobTitle",
+      "targets": [
+        ["id=jobTitle_jobTitle", "id"],
+        ["name=jobTitle[jobTitle]", "name"],
+        ["css=#jobTitle_jobTitle", "css:finder"],
+        ["xpath=//input[@id='jobTitle_jobTitle']", "xpath:attributes"],
+        ["xpath=//form[@id='frmSavejobTitle']/fieldset/ol/li/input", "xpath:idRelative"],
+        ["xpath=//li/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "ce830616-5ca1-480f-b90c-5ea5bbee7eb0",
+      "comment": "",
+      "command": "type",
+      "target": "id=jobTitle_jobTitle",
+      "targets": [
+        ["id=jobTitle_jobTitle", "id"],
+        ["name=jobTitle[jobTitle]", "name"],
+        ["css=#jobTitle_jobTitle", "css:finder"],
+        ["xpath=//input[@id='jobTitle_jobTitle']", "xpath:attributes"],
+        ["xpath=//form[@id='frmSavejobTitle']/fieldset/ol/li/input", "xpath:idRelative"],
+        ["xpath=//li/input", "xpath:position"]
+      ],
+      "value": "${a}${y}"
+    }, {
+      "id": "1a6c8fef-46df-48a9-8e75-3a39275a3e6a",
+      "comment": "",
+      "command": "store",
+      "target": "${y}",
+      "targets": [],
+      "value": "x"
+    }, {
+      "id": "24e90ee1-c2e7-4a7b-b446-796f2fafdaf7",
+      "comment": "",
+      "command": "click",
+      "target": "id=jobTitle_jobDescription",
+      "targets": [
+        ["id=jobTitle_jobDescription", "id"],
+        ["name=jobTitle[jobDescription]", "name"],
+        ["css=#jobTitle_jobDescription", "css:finder"],
+        ["xpath=//textarea[@id='jobTitle_jobDescription']", "xpath:attributes"],
+        ["xpath=//form[@id='frmSavejobTitle']/fieldset/ol/li[2]/textarea", "xpath:idRelative"],
+        ["xpath=//textarea", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "f23cff1b-b2e5-47a6-84e9-2ab9270e0be8",
+      "comment": "",
+      "command": "type",
+      "target": "id=jobTitle_jobDescription",
+      "targets": [
+        ["id=jobTitle_jobDescription", "id"],
+        ["name=jobTitle[jobDescription]", "name"],
+        ["css=#jobTitle_jobDescription", "css:finder"],
+        ["xpath=//textarea[@id='jobTitle_jobDescription']", "xpath:attributes"],
+        ["xpath=//form[@id='frmSavejobTitle']/fieldset/ol/li[2]/textarea", "xpath:idRelative"],
+        ["xpath=//textarea", "xpath:position"]
+      ],
+      "value": "5x"
+    }, {
+      "id": "c148e0ab-41e2-4b53-86d7-3fde99fb7c0b",
+      "comment": "",
+      "command": "click",
+      "target": "id=jobTitle_note",
+      "targets": [
+        ["id=jobTitle_note", "id"],
+        ["name=jobTitle[note]", "name"],
+        ["css=#jobTitle_note", "css:finder"],
+        ["xpath=//textarea[@id='jobTitle_note']", "xpath:attributes"],
+        ["xpath=//form[@id='frmSavejobTitle']/fieldset/ol/li[4]/textarea", "xpath:idRelative"],
+        ["xpath=//li[4]/textarea", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "0903c0bd-39b8-4a0c-9b14-f35b90d8c798",
+      "comment": "",
+      "command": "type",
+      "target": "id=jobTitle_note",
+      "targets": [
+        ["id=jobTitle_note", "id"],
+        ["name=jobTitle[note]", "name"],
+        ["css=#jobTitle_note", "css:finder"],
+        ["xpath=//textarea[@id='jobTitle_note']", "xpath:attributes"],
+        ["xpath=//form[@id='frmSavejobTitle']/fieldset/ol/li[4]/textarea", "xpath:idRelative"],
+        ["xpath=//li[4]/textarea", "xpath:position"]
+      ],
+      "value": "5x"
+    }, {
+      "id": "63814f27-85b8-4622-8bc8-a80120872534",
+      "comment": "",
+      "command": "click",
+      "target": "css=.largeTextBox:nth-child(4)",
+      "targets": [
+        ["css=.largeTextBox:nth-child(4)", "css:finder"],
+        ["xpath=//form[@id='frmSavejobTitle']/fieldset/ol/li[4]", "xpath:idRelative"],
+        ["xpath=//ol/li[4]", "xpath:position"],
+        ["xpath=//li[contains(.,'Note')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "6ce3c2cc-6318-4e4e-9881-94a5b7ef34df",
+      "comment": "",
+      "command": "click",
+      "target": "id=btnSave",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "2030f323-da32-41bd-a498-eb5e9595121a",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "2f34862e-5677-4b96-9fd1-5f7d3cafffad",
+      "comment": "",
+      "command": "echo",
+      "target": "AddJob PASSED",
+      "targets": [],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "4ab8c13c-afc5-409b-be19-9d654ba10da7",
+    "name": "HRM",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["bf67cae7-3089-4af9-80dd-3efa8dbaad0c", "6ea8e5ce-8f84-4c18-a1c2-9b772669c606", "52853bf7-f533-4386-ae47-0d08d90e8d46", "56972537-df00-4250-8416-9acec6a75fba"]
+  }],
+  "urls": ["https://opensource-demo.orangehrmlive.com/"],
+  "plugins": []
+}
